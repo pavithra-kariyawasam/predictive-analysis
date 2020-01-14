@@ -1,0 +1,5 @@
+extract the project
+ using cmd run below 2 codes
+	pip install virtualenv
+	Sudo apt-get install virtualenv
+open project using visual code studio

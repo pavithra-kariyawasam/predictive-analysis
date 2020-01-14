@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>HIRDARAMANI GROUP OF COMPANY</title>
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  <div style ='background-color: #c5cddb;'>
+  <div class="container">
+  <br>
+  <div class="p-3 mb-2 bg-info text-white">
+  <div class="row" >
+    <div class="col-sm">
+     
+    </div>
+    <div class="col-sm">
+	<p class="font-weight-bold" align="center" style="font-size:30px" >HIRDARAMANI GROUP OF COMPANY</p>
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+  </div>
+</div>
+ 
+  <div class="container">
+  <div style ='background-color: #def4f7;' class="card border-primary mb-3" style="max-width: 25rem; border-radius: 30px; font-size:30px" >
+    <form method = "POST" action = "http://localhost:5000/result" id="myForm">
+	<br>
+      <div class="form-group row">
+        <label for="cid" class="col-sm-2 col-form-label" align="center">  Tenant ID</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="tid" name="tid">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="cid" class="col-sm-2 col-form-label" align="center">  Company ID</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="cid" name="cid">
+          </div>
+      </div>
+ 
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0" align="center"> Site Name</legend>
+          <div class="col-sm-10">
+       
+            <div class="form-check" align="left">
+              <input class="form-check-input" type="radio" name="site" id="site" value="1" >
+              <label class="form-check-label" for="site" >
+              CKT-AGAL
+              </label>
+            </div>
+            <div class="form-check" align="left">
+              <input class="form-check-input" type="radio" name="site" id="site" value="0">
+              <label class="form-check-label" for="site">
+              SEE-HMA
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <div class= "row">
+          <legend class="col-form-label col-sm-2 pt-0" align="center">Captured Date </legend>
+           
+              
+              <input type="date" name="CapturedDate" id="CapturedDate">
+             
+        </div>
+      </fieldset>
+
+
+      <div class="form-group row">
+          <label for="cid" class="col-sm-2 col-form-label" align="center">  Shift ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="sid" name="sid">
+            </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+          <label for="cid" class="col-sm-2 col-form-label" align="center">  Shift Hour ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="shid" name="shid">
+            </div>
+      </div>
+
+       <fieldset> 
+          <div class="dropdown" >
+             
+                Item Classification
+                
+                <select name="ItemClassification" id="ItemClassification">
+                  <optgroup label="---Select Category--">
+                    <option value="Cami">Cami</option>
+                    <option value="Jacket">Jacket</option>
+                    <option value="Kids Dress">Kids Dress</option>
+                    <option value="Pant-Ladies">Pant-Ladies</option>
+                    <option value="Pants/Shorts">Pants/Shorts</option>
+                    <option value="Skinnies">Skinnies</option>
+                    <option value="Tshirt-Men">Tshirt-Men</option>
+                    <option value="Tshirt-Girls">Tshirt-Girls</option>
+                    <option value="TEES">TEES</option>
+                    <option value="Women Tops">Women Tops</option>
+                    <option value="Others">Others</option>
+                  </optgroup>
+                </select>
+				
+				
+				
+				  <fieldset class="form-group">
+          <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0" align="center">Garment Status ID</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gs" id="gs" value="1" >
+          <label class="form-check-label" for="gs">
+            1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gs" id="gs" value="2">
+          <label class="form-check-label" for="gs">
+            2
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gs" id="gs" value="3" >
+          <label class="form-check-label" for="gs">
+           3
+          </label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+
+              
+          </div>
+      </fieldset>
+      <br>   
+
+            
+      
+
+      
+  
+  
+  
+  <div class="form-group row" align="center">
+    <div class="col-sm-10" >
+      
+      <a href=# id=test><button class="btn btn-primary"   value = "submit" type="button" onclick="myFunction()">Predict for BandID</button></a>
+    </div>
+  </div>
+  
+</form>
+
+
+<div>
+<h3>{{ data }}</h3>
+  
+</div>
+
+</div>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myForm").submit();
+    document.getElementById("myForm").reset();
+}
+     
+  </script>
+</body>
+ 
+</html>
